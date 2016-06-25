@@ -10,6 +10,7 @@
 
 var Tips = require('blear.ui.tips');
 var typeis = require('blear.utils.typeis');
+var time = require('blear.utils.time');
 
 
 var buildExports = function (type) {
@@ -33,10 +34,13 @@ var buildExports = function (type) {
             });
         });
 
-        return tips.open();
+        time.nextTick(function () {
+            tips.open();
+        });
+
+        return tips;
     };
 };
-
 
 
 exports.default = buildExports('default');
