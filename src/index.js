@@ -43,7 +43,7 @@ var buildExports = function (type) {
 };
 
 
-exports.default = buildExports('default');
+exports['default'] = buildExports('default');
 exports.success = buildExports('success');
 exports.danger = buildExports('danger');
 exports.info = buildExports('info');
